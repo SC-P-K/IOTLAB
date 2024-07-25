@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+// 함수(프로그램에서 기능 = 동작, 연산)
+
+
+// ex) 자판기 (object), button(동작)-method, 
+//함수 선언식
+function sum(p1,p2){ // function 함수명 (매개변수(=파라메터,입력)){내용}
+      let hap=p1+p2; // 정의(내용)  // 이안의 내용은 로직이라고 함.
+      return hap; // 반환 (결과) , 리턴이 필수는 아님
+} // return 대신 console.log(hap); 출력만 해줘도 상관없음.
+
+
+// 1. 함수 호출(Call)
+sum(21 , 24); // 파라메터 패싱 (전달되는 값), 21,24 - 실인수 , p1,p2 - 가인수
+// 반환 값을 받기위해 " oo = "가 필요
+let result = sum(21,24);
+console.log(result);
+
+// 2. 함수 표현식 : 변수에 할당해서 사용하는 법 
+// let a = 식, 함수호출문, 함수선언문 ==> 함수포인터(변수에 함수를 담음)
+// 호출법은 같으나 제작법이 다름. (변수이름이 함수역할을 함)
+
+//함수 표현식!
+let mul = function(p1,p2){
+  return p1*p2;
+}
+
+let value = mul(20 , 50);
+console.log(value);
+
+// js엔진 해석순서 Function 우선 때문에 호출문과 순서를 바꾸어도 작동
+// 하지만 함수표현식(함수포인터)는 호출문이 표현식보다 위에 있을경우 ERROR.
+// 함수표현식은 Function이 아니라 변수로 인식됨으로 나타나는 현상.
+/*
+sum(21 , 24);
+let result = sum(21,24);
+console.log(result);
+
+
+let value = mul(20 , 50);
+let mul = function(p1,p2){
+  return p1*p2;
+}
+console.log(value);
+*/
+
+// 매개변수로 두개의 수를 받아
+// 두 수 사이의 총합을 구하여 리턴하는 함수를 선언(Function)
+
+function totalHap (p3 , p4){
+  let sum = 0;
+  for(let i=p3;i<=p4;i++){
+    sum+=i; // 누적
+  }
+  return sum;
+}
+
+let v = totalHap(120,555); //
+console.log(v)
+
+</script>
+</head>
+<body>
+ 
+<div class="container mt-3">
+  <h2>JavaScript</h2>
+  <div class="card">
+    <div class="card-header">ex02</div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-8">
+                <input type = "number" id = "num1" class="form-control"/>+
+                <input type = "number" id = "num2" class="form-control"/>
+                <button class = "btn btn-primary btn-sm" onClick = "goClick()">클릭</button>
+            </div>
+            <div class="col-4" id = "msg">결과화면</div>
+        </div>
+       <!-- <button class = "btn btn-primary btn-sm" onClick = "goClick()">클릭</button> -->
+    </div> 
+    <div class="card-footer">사물지능기반 지능제어 서비스 개발자 과정</div>
+  </div>
+</div>
+<script>
+    // 여기에 작성하면 된다.
+    //alert("OK")
+    // function goClick(){
+    //     document.getElementById("msg").innerText="새로운 문자열";
+    //     let a = 10; // 변수지정 let
+    //     console.log(a); // 디버깅 결과를 알아보고 싶을때
+    // }
+    function goClick(){
+        let num1 = document.getElementById("num1").value;
+        let num2 = document.getElementById("num2").value;
+        let sum = parseFloat(num1) + parseFloat(num2); // parseFloat "20"->20
+        console.log(sum);
+        // 합치면 문자열 합 컨케트네이트 가 나온다 때문에 정수형으로 변환(parsefloat())이 필요!
+        document.getElementById("msg").innerHTML="<font color ='red'> "+sum+"</font>";
+        // detail이 중요. "''";대소문자 등 사소한 것 때문에 작동이 안되므로 주의요함.
+    }
+</scripT>
+</body>
+</html>

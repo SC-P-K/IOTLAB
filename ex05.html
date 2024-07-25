@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+      //변수(가변형) 스크립트언어는 int,float 같은 자료형을 정하지 않는다 거의 가변형, 상수
+      // var aaaa
+      var a = 10;
+      var a = 30; // var를 사용하면 중복선언이 가능.
+
+      let a = 10;
+      let a = 30; // let은 중복선언 불가능.
+      console.log(a); // aaaa
+      const b=20; // 상수 = const, 넣으면 바꿀수 없다.
+      b = 40; // x   // Assianment 할당 error
+      console.log(b);
+
+      //다음주에는 데이터 타입을 배울 것.(6가지 타입)
+      let arr=['a','b']; // Python = list , js = Array
+
+
+
+
+  </script>
+</head>
+<body>
+ 
+<div class="container mt-3">
+  <h2>JavaScript</h2>
+  <div class="card">
+    <div class="card-header">ex02</div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-8">
+                <input type = "number" id = "num1" class="form-control"/>+
+                <input type = "number" id = "num2" class="form-control"/>
+                <button class = "btn btn-primary btn-sm" onClick = "goClick()">클릭</button>
+            </div>
+            <div class="col-4" id = "msg">결과화면</div>
+        </div>
+       <!-- <button class = "btn btn-primary btn-sm" onClick = "goClick()">클릭</button> -->
+    </div> 
+    <div class="card-footer">사물지능기반 지능제어 서비스 개발자 과정</div>
+  </div>
+</div>
+<script>
+  // function 함수이름(){     }, 익명함수:function(){   } =>이름이 없는 함수, ()=>{   } : 람다식 
+  /*
+  document.getElementById("btn").addEventListener("click", ()=>{ 
+       document.getElementById("msg").innerHTML="클릭이 되었습니다."; 
+  });
+  */
+  // 함수표현식(함수이름과=구현부를 분리)
+  const goBtn1=function(a, b){
+    return a+b;
+  }
+   document.getElementById("btn").addEventListener("click", goBtn);
+  // 함수선언식(원형:프로토타입+구현부)
+  function goBtn(){
+    let sum=goBtn2(100, 100);
+    document.getElementById("msg").innerHTML=sum;
+    //return a+b;
+  } 
+  // 람다식(화살표 함수)
+  const goBtn2=(a, b)=>{ return a+b; };
+   
+
+
+  //20240722
+
+  // 데이터는 변수형태로 메모리에 저장된다.
+
+  // 데이터 타입(6가지 타입) -->?
+  // 각 문단 끝에는 항상 ';' ! , 주의할 것.
+  let str = "파이썬"; // str 에 할당(대입, =)하겠다(let). "파이썬"을
+  console.log(str); // 콘솔 로그창을 띄워 자료형을 알아보겠다.
+  console.log(typeof str)
+  let x1 = 23;
+  let x2 = 23.55
+  console.log(x1,x2);
+  console.log(typeof x1)
+  // js에서는 int, float 타입이 없고 number 타입으로 표현됨.
+
+  //불리언(Boolean) 타입
+  let x=true; // false,0 = 거짓, true , '0이외의 값' = 참
+  console.log(x);
+  console.log(typeof x);
+  let y=true;
+  // 관계 연산자, 논리연산자의 결과는 boolean
+  // 다른 언어에서는 비교 대상자가 아니나 js에서는 비교가가능.
+  // 연산은 불가하나 비교는 가능 ===>????
+
+  // 공백은 "undefined(미정의)" 타입.
+  let car;
+  console.log (typeof car);
+
+  //NULL 타입
+  let z = null;
+  console.log(z) 
+  console.log(typeof z);
+
+  // 구조 (object) : ex) 회원 구조(object)
+  //object(객체) : Dic {key : value} - JSON(문자열) 테이터
+  const person {
+      firstName : "park", 
+      lastName : "mae il"
+      age : 40;
+      phone : '010-1111-1111'
+      };
+  console.log(person);
+  // 객체에서 (.)은 "참조"를 의미
+  console.log(person.age);
+  // 다른 방법 = 객체의 key 값 접근
+  console.log(person["age"]);
+
+
+  // object =====> string (stringfy)
+  // 많이 쓰는 함수 stringfy ==> 문자열로 바꾸어줌
+  // 통신시 binary 값 으로 날아가기 떄문에 형태 그대로 다른 언어로 보낼때 유용.
+  let json = JSON.stringfy(person);
+  console.log(json) // 타입이 Dic "{key : value}" 형태로 
+  console.log(typeof json) // sting 타입!!!
+
+  // string =====> object (parse; 분석하다.)
+  const member = JSON.parse(json);
+  console log (member.age)
+  console.log (typeof member);
+
+
+  // 자료구조 (선형 (자료)구조 , 비선형 (자료)구조)
+  // 논리적인 사고능력 배양이 중요..
+
+  // 대표적인 선형구조 => array(배열)
+  const arr = new Array();//const arr=[];
+  // new 왜 만들었을까? => 데이터를 넣고 뺴고 하기위한 API(libarary)
+  // array = 기억공간 여러개를 붙여놓은 구조
+  const arr=[];
+  console.log(typeof arr); // 타입(자료형)은 object다.
+  //const 변수의 값이 바뀌는 것을 방지, 한정사이며,
+  // 한정사가 붙은 변수는 상수로 취급. == 상수화
+
+      // 메모리 메모리 교환 ===> 소트(sort)?
+
+  // Array(배열)=object
+  const arr = [1,2,3]; // new Array
+  console.logarr[2]); //3
+  console.log(arr.push(7));// push : 데이터 끝쪽에 추가
+  console.log(arr);
+  arr[2]= 9;
+  const brr=[];
+
+  
+
+
+</script>
+</body>
+</html>

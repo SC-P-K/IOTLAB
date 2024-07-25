@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+     // 반복문
+     // for ~ loop // 조건을 만족할때까지 반복하는 loop 문
+     let number = [1,2,3,4,5];
+     console.log(number.length); // <5
+     for(   ){
+
+     }
+     // 조건을 만족할때까지 반복하는 loop 문
+
+     for(let i=0; i<number.length;i++){// (let i=0;i<5;i++)
+        console.log(number[i]);
+        sum+=number[i]; //누적
+     }
+      console.log(sum); //15
+
+
+      // for ~ in  여러개의 구조 : for ~ each
+      for(const su in number){
+        console.log(su); // index 
+      }
+
+      const person={
+               firstName : "park"
+               lastName : "mar il"
+               age : 40
+               phone : "010-1111-11111"
+      };
+      for(const key in person){
+        console.log(person[key]);
+      }
+
+      // for ~ of
+      for (const data of number){
+        console.log(data); // 배열의 값이 출력됨
+      }
+      //        01234<--index
+      let str="12345";
+      let add = 0;
+      for(const num of str) {
+        console.log (num);
+        add+=parseInt (num)
+      }
+      console.log(add); //"012345" = 15
+      //while (반복문)
+      // 1~10까지 출력
+      let i =1;
+      while (i<10){
+          console.log(i);
+          i++l;
+      }
+
+
+
+
+
+
+</script>
+</body>
+</html>

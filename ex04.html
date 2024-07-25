@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    founction goClick(){
+      document.getElementById("btn").addEventListener("click, goclick"())
+          DOCUMENT.getElementById("msg"),innerHTML = 클릭이 되었습니다".;
+    }
+
+  </script>
+</head>
+<body>
+ 
+<div class="container mt-3">
+  <h2>JavaScript</h2>
+  <div class="card">
+    <div class="card-header">ex02</div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-8">
+              <button class="btn btn-primary btn-sm" id = "btn">클릭</button>
+            </div>
+            <div class="col-4">결과화면</div>
+        </div>
+       <!-- <button class = "btn btn-primary btn-sm" onClick = "goClick()">클릭</button> -->
+    </div> 
+    <div class="card-footer">사물지능기반 지능제어 서비스 개발자 과정</div>
+  </div>
+</div>
+<script>
+  // founction 함수이름())goClick(){      } => 익명함수,이름이 없는 함수, ()=>{   } : 람다식
+  /*  
+    document.getElementById("btn").addEventListener("click, ()=>{
+        document.getElementById("msg"),innerHTML = 클릭이 되었습니다".;
+      })
+  */
+  document.getElementById("btn").addEventListener("click", goBtn);
+  //함수 선언식(원형 : 프로토타입 + 구현부)
+  function goBtn(){
+    let goBtn1(100,100)
+    document.getElementById("msg").innerHTML="a+b"
+    return a+b;
+  }
+  // 함수표현식(함수이름과 = 구현부를 분리)
+  const goBtn = function(a,b){
+    return a=b
+  }
+---
+
+  //람다식(화살표 함수)
+  const goBtn=(a,b) => {return a+b; }
+
+  //함수 선언식(원형 : 프로토타입 + 구현부)
+  function goBtn(a,b){
+    return a+b;
+  }
+  // 함수표현식(함수이름과 = 구현부를 분리)
+  const goBtn = function(a,b){
+    return a=b
+  }
+  //람다식(화살표 함수)
+  const goBtn=(a,b) => {return a+b; }
+
+
+
+
+</script>
+</body>
+</html>

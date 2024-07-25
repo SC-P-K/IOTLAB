@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+      \
+                <input type = "number" id = "num1" class="form-control"/>+
+                <input type = "number" id = "num2" class="form-control"/>
+                <button class = "btn btn-primary btn-sm" onClick = "goClick()">클릭</button>
+            </div>
+            <div class="col-4" id = "msg">결과화면</div>
+        </div>
+       <!-- <button class = "btn btn-primary btn-sm" onClick = "goClick()">클릭</button> -->
+    </div> 
+    <div class="card-footer">사물지능기반 지능제어 서비스 개발자 과정</div>
+  </div>
+</div>
+<script>
+ // 조건문 (if ~ else, if else if ~)
+ let age = 12;
+ let busFace = 0;
+
+ if(age<=7){
+  busFare=0;
+ }else if(age >= 8 && age<=13){
+  busFare=450;
+ }else if(age > = 14 && age<=19){
+  busFare=720;
+ }else if(age > = 20 && age <= 70){
+  busFare=1200;
+ }else {
+  busFare=0;
+ }
+ console.log(busFare); // 450
+ }else{
+   console.log("나이는 1살 부터 130살 이내의 값을 입력해야 합니다.")
+ }
+
+ //if에서 거짓으로 취급하는 값
+ if(NaN){ // false underfined, null, 0, NaN
+  console.log("if실행");
+ }else{
+  console.log("else실행"); // 0
+ }
+ // React.js, Next.js, Vue.j ~~> 프론트엔드 
+</script>
+</body>
+</html>
